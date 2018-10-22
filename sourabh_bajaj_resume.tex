@@ -1,6 +1,6 @@
 %-------------------------
 % Resume in Latex
-% Author : Sourabh Bajaj
+% Author : Robert James Gabriel
 % License : MIT
 %------------------------
 
@@ -49,6 +49,29 @@
   }
 }
 
+\newcommand{\resumeItemNoDots}[2]{
+  \item\small{
+    \textbf{#1}{#2 \vspace{-2pt}}
+  }
+}
+
+\newcommand{\resumeItemNoDotsSpace}[2]{
+  \item\small{
+    \textbf{#1}{#2 \vspace{-2pt}}
+  }
+}
+
+
+\newcommand{\resumeSubheadingEducation}[4]{
+  \vspace{-1pt}\item
+    \begin{tabular*}{0.97\textwidth}[t]{l@{\extracolsep{\fill}}r}
+      \textbf{#1} & #2 \\
+      \textit{\small#3} & \textit{\small #4} \\
+    \end{tabular*}\vspace{-5pt}
+}
+
+
+
 \newcommand{\resumeSubheading}[4]{
   \vspace{-1pt}\item
     \begin{tabular*}{0.97\textwidth}[t]{l@{\extracolsep{\fill}}r}
@@ -74,107 +97,117 @@
 
 %----------HEADING-----------------
 \begin{tabular*}{\textwidth}{l@{\extracolsep{\fill}}r}
-  \textbf{\href{http://sourabhbajaj.com/}{\Large Sourabh Bajaj}} & Email : \href{mailto:sourabh@sourabhbajaj.com}{sourabh@sourabhbajaj.com}\\
-  \href{http://sourabhbajaj.com/}{http://www.sourabhbajaj.com} & Mobile : +1-123-456-7890 \\
+	\textbf{\href{https://robertgabriel.ninja/}{\Large Robert James Gabriel}} & Email : \href{mailto:robert\_gabriel@outlook.com}{robert\_gabriel@lookout.com}\\
+	\href{https://robertgabriel.ninja}{https://robertgabriel.ninja} & Mobile : +353-85-220-4534 \\
+	& \href{https://github.com/RobertJGabriel}{Github}  \href{https://www.linkedin.com/in/robertjamesgabriel/}{Linkedin} \href{https://www.robertgabriel.ninja/apps/}{Apps}  \\
 \end{tabular*}
 
 
-%-----------EDUCATION-----------------
-\section{Education}
-  \resumeSubHeadingListStart
-    \resumeSubheading
-      {Georgia Institute of Technology}{Atlanta, GA}
-      {Master of Science in Computer Science;  GPA: 4.00}{Aug. 2012 -- Dec. 2013}
-    \resumeSubheading
-      {Birla Institute of Technology and Science}{Pilani, India}
-      {Bachelor of Engineering in Electrical and Electronics;  GPA: 3.66 (9.15/10.0)}{Aug. 2008 -- July. 2012}
-  \resumeSubHeadingListEnd
-
 
 %-----------EXPERIENCE-----------------
-\section{Experience}
-  \resumeSubHeadingListStart
+\section{\href{https://github.com/RobertJGabriel}{Experience}}
+\resumeSubHeadingListStart
 
-    \resumeSubheading
-      {Google}{Mountain View, CA}
-      {Software Engineer}{Oct 2016 - Present}
-      \resumeItemListStart
-        \resumeItem{Tensorflow}
-          {TensorFlow is an open source software library for numerical computation using data flow graphs; primarily used for training deep learning models. Worked on APIs and performance for training models on Tensor Processing Units (TPU).}
-        \resumeItem{Apache Beam}
-          {Apache Beam is a unified model for defining both batch and streaming data-parallel processing pipelines, as well as a set of language-specific SDKs for constructing pipelines and runners.}
-      \resumeItemListEnd
+\resumeSubheading
+{robertgabriel.ninja}{Remote/Traveling}
+{Founder / Open source Engineer}{June 2018 - November 2018}
+\resumeItemListStart
+\resumeItemNoDots{}
+{Founded two mico sass company with over 10,000 daily users.
+	Worked on opensource tooling Golang and Node modules (5,000 downloads). Created and maintained  apps with over 100,000 daily users. Consulted on projects.}
+\resumeItemListEnd
 
-    \resumeSubheading
-      {Coursera}{Mountain View, CA}
-      {Senior Software Engineer}{Jan 2014 - Oct 2016}
-      \resumeItemListStart
-        \resumeItem{Notifications}
-          {Service for sending email, push and in-app notifications. Involved in features such as delivery time optimization, tracking, queuing and A/B testing. Built an internal app to run batch campaigns for marketing etc.}
-        \resumeItem{Nostos}
-          {Bulk data processing and injection service from Hadoop to Cassandra and provides a thin REST layer on top for serving offline computed data online.}
-        \resumeItem{Workflows}
-          {Dataduct an open source workflow framework to create and manage data pipelines leveraging reusables patterns to expedite developer productivity.}
-        \resumeItem{Data Collection}
-          {Designed the internal survey and crowd sourcing platform which allowed for creating various tasks for crowd sourcing or embedding surveys across the Coursera platform.}
-        \resumeItem{Dev Environment}
-          {Analytics environment based on docker and AWS, standardized the python and R dependencies. Wrote the core libraries that are shared by all data scientists.}
-        \resumeItem{Data Warehousing}
-          {Setup, schema design and management of Amazon Redshift. Built an internal app for access to the data using a web interface. Dataduct integration for daily ETL injection into Redshift.}
-        \resumeItem{Recommendations}
-          {Core service for all recommendation systems at Coursera, currently used on the homepage and throughout the content discovery process. Worked on both offline training and online serving.}
-        \resumeItem{Content Discovery}
-          {Improved content discovery by building a new onboarding experience on coursera. Using this to personalize the search and browse experience. Also worked on ranking and indexing improvements.}
-        \resumeItem{Course Dashboards}
-          {Instructor dashboards and learner surveying tools, which helped instructors run their class better by providing data on Assignments and Learner Activity.}
-      \resumeItemListEnd
 
-    \resumeSubheading
-      {Lucena Research}{Atlanta, GA}
-      {Data Scientist}{Summer 2012 and 2013}
-      \resumeItemListStart
-        \resumeItem{Portfolio Management}
-          {Created models for portfolio hedging,  portfolio optimization and price forecasting. Also creating a strategy backtesting engine used for simulating and backtesting strategies.}
-        \resumeItem{QuantDesk}
-          {Python backend for a web application used by hedge fund managers for portfolio management.}
-      \resumeItemListEnd
+\resumeSubheading
+{Teamwork.com}{Cork, Ireland}
+{Team Lead/Software Engineer}{January 2015 - May 2018}
+\resumeItemListStart
+\resumeItemNoDots{}
+{Lead the conversion/re-architecture of the Teamwork.com website and platform from Coldfusion to Golang and Jamstack(Knockout), reducing page load times from an average of 5 seconds to an average of fewer than 2 seconds. Developed into a PWA, API endpoints written in Golang and Coldfusion.}
+\resumeItemNoDots{}
+{Created and architectured modern deployment for changes. Including staging, production, tests, Travis.}
+\resumeItemNoDots{}
+{Managing a team of four engineers, including time off requests, interviewing potential interns, reviewing code and ensuring the team delivers tasks on time.}
+\resumeItemNoDots{}
+{Frequently use various services (AWS, S3, Travis, Kubernetes, Lambda, Jest)}    
+\resumeItemNoDots{}
+{Reduced the time between release to the deployment of application changes from 30 minutes to under 15 minutes by developing the build portion of our continuous integration pipeline using Docker, Kubernetes and Travis.}   
+\resumeItemNoDots{}
+{Built a microservice used for automated translation of static web pages in pipelines.}   
 
-    \resumeSubheading
-      {Georgia Institute of Technology}{Atlanta, GA}
-      {Research and Teaching Assistant}{Jan 2012 - Dec 2013}
-      \resumeItemListStart
-        \resumeItem{Research Assistant - Machine Learning}
-          {Research on machine learning for portfolio hedging and replication algorithms. Modeling low-risk \& continuous-return strategies. Developed the python library QSTK.}
-        \resumeItem{Teaching Assistant - Computational Investing}
-          {The online course on Coursera, had more than 100,000 students enrolled. It was featured on the 11 Alive News and the Atlanta Journal Constitution. Involved in creating assignment, exams and conducting recitation sessions. Also taught the on-campus version of the course.}
-      \resumeItemListEnd
+\resumeItemListEnd
 
-  \resumeSubHeadingListEnd
+{Software Engineer}
+\resumeItemListStart
+\resumeItemNoDots{}{ Implemented marketing tools and features within the products, website and blog.}
+\resumeItemNoDots{}{
+Created a Golang based API documentation generator.}
+\resumeItemNoDots{}{
+	Developing improvements to an import
+system that allows users to import their data from competitors into Teamwork Projects directly.}
+\resumeItemNoDots{}{
+Responsibilities also included creating PHP, Coldfusion and Golang based server-side/frontend solutions, implemented a signup page used by millions, CSS, Javascript, and SEO implementation.}
+      
+\resumeItemListEnd
 
+\resumeSubheading
+{Engineering Internships}{}
+{Microsoft, Dell/EMC, Horner, Teamwork.com}{January 2010 - January 2015}
+\resumeItemListStart
+\resumeItemNoDotsSpace{Teamwork.com (January 2015 – September 2015)}
+{}
+\resumeItemNoDotsSpace{Rubicon Center (July 2013 – September 2013)}
+{}
+\resumeItemNoDotsSpace{Dell/EMC (July 2013 – September 2013)}
+{}
+\resumeItemNoDotsSpace{Dell/EMC (July 2012 – September 2012) }
+{}
+\resumeItemNoDotsSpace{Microsoft (February 2011 – March 2011)}
+{}
+\resumeItemNoDotsSpace{Horner APG (July 2010 – September 2010)}
+{}
+\resumeItemNoDotsSpace {More details available on \href{robetgabriel.ninja/work}{robetgabriel.ninja/work}}{}
+\resumeItemListEnd
+
+\resumeSubHeadingListEnd
+
+
+%-----------EDUCATION-----------------
+\section{\href{https://robertgabriel.ninja/education}{Education}}
+
+\resumeSubHeadingListStart
+\resumeSubheadingEducation
+{Cork Institute of Technology and Science}{Cork, Ireland}
+{Bachelor of Honours in Computer Science;  GPA: 3.66}{Aug. 2012 - October. 2016}
+
+\resumeSubHeadingListEnd
 
 %-----------PROJECTS-----------------
-\section{Projects}
-  \resumeSubHeadingListStart
-    \resumeSubItem{QuantSoftware Toolkit}
-      {Open source python library for financial data analysis and machine learning for finance.}
-    \resumeSubItem{Github Visualization}
-      {Data Visualization of Git Log data using D3 to analyze project trends over time.}
-    \resumeSubItem{Recommendation System}
-      {Music and Movie recommender systems using collaborative filtering on public datasets.}
-    \resumeSubItem{Mac Setup}
-      {Book that gives step by step instructions on setting up developer environment on Mac OS.}
-  \resumeSubHeadingListEnd
+\section{\href{https://robertgabriel.ninja/projects}{Projects}}
+\resumeSubHeadingListStart
+\resumeSubItem{Open Source}
+{\href{https://www.robertgabriel/apps/helperbird}{OpenDyslexic Chrome} ,
+	\href{https://www.robertgabriel/apps/helperbird}{Netflix Hidden Categories},
+	\href{https://github.com/yvasiyarov/swagger}{Swagger for Golang},	\href{https://github.com/robertjgabriel/xbox-dvr}{Xbox One DVR}, 	\href{https://github.com/robertjgabriel/Google-profanity-words}{Google profanity words},
+	\href{https://www.robertgabriel/apps/helperbird}{More on robertgabriel/apps}.
+}
+\resumeSubHeadingListEnd
 
-%
-%--------PROGRAMMING SKILLS------------
-%\section{Programming Skills}
-%  \resumeSubHeadingListStart
-%    \item{
-%      \textbf{Languages}{: Scala, Python, Javascript, C++, SQL, Java}
-%      \hfill
-%      \textbf{Technologies}{: AWS, Play, React, Kafka, GCE}
-%    }
-%  \resumeSubHeadingListEnd
+
+%--------SKILLS------------
+\section{\href{https://robertgabriel.ninja}{Skills}}
+\resumeSubHeadingListStart
+\resumeSubItem{Languages}{Html, Vue.js, Javascript, Vuex , Bem CSS/Sass/Less, Angular, Knockout, PWA, Serverless, Service workers, NPM, Gulp, Webpack, Algorithms, React.js.}
+\resumeSubItem{Technologies}{Node.js, Go, Bash, SQL, Firebase, NoSQL, Coldfusion, PHP, Serverless, Express.js, Mongo.DB, AWS, API Design, Git, Babel, Jest, Puppeteer, Electron, Kubernetes, Docker, Coldfront, Netify, Linux and Docker}
+\resumeSubHeadingListEnd
+
+
+%-----------AWARDS-----------------
+\section{\href{https://robertgabriel.ninja/awards}{Awards}}
+\resumeSubHeadingListStart
+\resumeSubItem{Awards}{11 Engineering awards, 8 workplace awards, 5 Scholar awards and 3 grant awards}
+\resumeSubItem{Papers}{\href{https://www.robertgabriel.ninja/research-into-web-accessibility-for-dyslexics}{Web accessibility an Dyslexics},  \href{https://www.robertgabriel.ninja/adblockers}{Problems Posed by Ad-blockers},  \href{https://www.robertgabriel.ninja/adblockers}{Invited to speak at three conferences.}	}
+\resumeSubHeadingListEnd
 
 
 %-------------------------------------------
